@@ -15,6 +15,11 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/test")
+    String test() {
+        return "User controller";
+    }
+
     @GetMapping("/users")
     public List<User> getUsers() {
         return userService.getAllUsers();
